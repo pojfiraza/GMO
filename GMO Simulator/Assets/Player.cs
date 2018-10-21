@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
     private Rigidbody2D rigid;
     [SerializeField] GameObject detector;
+    [SerializeField] private Slider mana;
     public float movementMultiplier = 10.0f;
     // Use this for initialization
     void Awake () {
@@ -36,8 +38,12 @@ public class Player : MonoBehaviour {
         else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             var otherPosn = detector.transform.position;
-            detector.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+            detector.transform.rotation = Quaternion.Euler(0f, 0f, 90f);    
             transform.Translate(Vector2.down * movementMultiplier * Time.deltaTime);
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            mana.value -= 3;
         }
     }
 }

@@ -7,10 +7,10 @@ public class PCameraScript : MonoBehaviour {
     public GameObject Player;
     private Vector3 offset;
     public float smoothSpeed = 0.125f;
-    private int minx = -14 ;
-    private int miny= -7;
-    private int maxx = 14;
-    private int maxy = 7;
+    private int minx = -13 ;
+    private int miny= -6;
+    private int maxx = 13;
+    private int maxy = 6;
 
     // Use this for initialization
     void Start()

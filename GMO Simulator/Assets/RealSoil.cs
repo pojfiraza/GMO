@@ -5,7 +5,7 @@ using UnityEngine;
 public class RealSoil : MonoBehaviour {
 
     // Use this for initialization
-    protected bool PlayerInRange;
+    protected bool PlayerInRange = false    ;
     private SpriteRenderer soilSprite;
     [SerializeField] private Sprite till;
 
@@ -20,6 +20,13 @@ public class RealSoil : MonoBehaviour {
         if (PlayerInRange == true && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("COw");
+            soilSprite.sprite = till;
+            soilSprite.transform.position = gameObject.transform.position;
+        }
+        else if (PlayerInRange == true && Input.GetKeyDown(KeyCode.R))
+        {
+            GameObject plant= this.gameObject.transform.GetChild(0).gameObject;
+            plant.SetActive(true);
             soilSprite.sprite = till;
             soilSprite.transform.position = gameObject.transform.position;
         }
