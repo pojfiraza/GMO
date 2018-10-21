@@ -20,6 +20,7 @@ public class RealSoil : MonoBehaviour {
         target = this.gameObject.transform.GetChild(1).gameObject;
     }
     void Update () {
+
         if (PlayerInRange == true && Input.GetKeyDown(KeyCode.E) && mana.value != 0)
         {
             Debug.Log("COw");
@@ -33,35 +34,21 @@ public class RealSoil : MonoBehaviour {
             soilSprite.sprite = till;
             soilSprite.transform.position = gameObject.transform.position;
         }
-    }
-    protected void OnTriggerEnter2D(Collider2D otherCollider)
-    {
-        if (otherCollider.CompareTag("Detector") && SimpleSoil.isTargetActive == false)
+        if (target.activeSelf)
         {
-            SimpleSoil.isTargetActive = true;
-            if (SimpleSoil.collided > 1)
-            {
-                target.SetActive(false);
-                SimpleSoil.collided -= 1;
-            }
-            SimpleSoil.collided += 1;
-            target.SetActive(true);
-            soilSprite.color = new Color(.8f, .8f, .8f);
-            Debug.Log("C");
-            PlayerInRange = true;
-        }
-    }
-
-    protected void OnTriggerExit2D(Collider2D otherCollider)
-    {
-        if (otherCollider.CompareTag("Detector"))
-        {
-            SimpleSoil.isTargetActive = false;
-            target.SetActive(false  );
+            target.SetActive(false);
             soilSprite.color = new Color(1f, 1f, 1f);
-            Debug.Log("D");
+            Debug.Log("C");
             PlayerInRange = false;
-            
         }
+    }
+    public void HitByRay()
+    {
+        
+        target.SetActive(true);
+        soilSprite.color = new Color(.8f, .8f, .8f);
+        Debug.Log("C");
+        PlayerInRange = true;
+        Debug.Log("I was hit by a Ray");
     }
 }

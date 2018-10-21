@@ -4,43 +4,49 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
-
-    private Rigidbody2D rigid;
-    [SerializeField] GameObject detector;
     [SerializeField] private Slider mana;
     public float movementMultiplier = 10.0f;
-    // Use this for initialization
-    void Awake () {
-        rigid = GetComponent<Rigidbody2D>();
-    }
-	
+    Vector2 dir;
+    Vector3 location;
+    RaycastHit2D hit;
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            var otherPosn = detector.transform.position;
-            detector.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            location = (transform.position + new Vector3(-1f, -.2f, 0f));
+            hit = Physics2D.Raycast(location, new Vector2(-0.3f, 0f), .3f);
+            dir = Vector2.left;
             transform.Translate(Vector2.left * movementMultiplier * Time.deltaTime);
 
         }
         else if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)))
         {
-            var otherPosn = detector.transform.position;
-            detector.transform.rotation = Quaternion.Euler(0f, 0f, 270f);
+            location = (transform.position + new Vector3(0f, 1f, 0f));
+            hit = Physics2D.Raycast(location, new Vector2(0f,.3f),.3f);
+            dir = Vector2.up;
             transform.Translate(Vector2.up * movementMultiplier * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            var otherPosn = detector.transform.position;
-            detector.transform.rotation = Quaternion.Euler(0f, 0f, 180f);
+            location = (transform.position + new Vector3(1f, -.2f, 0f));
+            hit = Physics2D.Raycast(location, new Vector2(0.3f, 0f),.3f);
+            dir = Vector2.right;
             transform.Translate(Vector2.right * movementMultiplier * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            var otherPosn = detector.transform.position;
-            detector.transform.rotation = Quaternion.Euler(0f, 0f, 90f);    
+            location = (transform.position + new Vector3(0f, -1f, 0f));
+            hit = Physics2D.Raycast(location, new Vector2(0f, -.3f), .3f);
+            dir = Vector2.down;
             transform.Translate(Vector2.down * movementMultiplier * Time.deltaTime);
         }
+        Debug.DrawRay(location, dir, Color.green);
+
+        if (hit.collider != null && hit.collider.tag != "Player")
+        {
+            hit.transform.SendMessage("HitByRay");
+        }
+            
         if (Input.GetKeyDown(KeyCode.E))
         {
             movementMultiplier = 5.00f;
