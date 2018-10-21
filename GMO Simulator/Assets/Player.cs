@@ -41,9 +41,15 @@ public class Player : MonoBehaviour {
             detector.transform.rotation = Quaternion.Euler(0f, 0f, 90f);    
             transform.Translate(Vector2.down * movementMultiplier * Time.deltaTime);
         }
-        else if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
+            movementMultiplier = 5.00f;
             mana.value -= 3;
+        }
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            movementMultiplier = 10.00f;
+
         }
     }
 }

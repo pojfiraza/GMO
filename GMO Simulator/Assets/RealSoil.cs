@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RealSoil : MonoBehaviour {
 
@@ -8,16 +9,18 @@ public class RealSoil : MonoBehaviour {
     protected bool PlayerInRange = false    ;
     private SpriteRenderer soilSprite;
     [SerializeField] private Sprite till;
-
+    [SerializeField] private Slider mana;
+    GameObject target;
 
 
     // Update is called once per frame
     private void Awake()
     {
         soilSprite = gameObject.GetComponent<SpriteRenderer>();
+        target = this.gameObject.transform.GetChild(1).gameObject;
     }
     void Update () {
-        if (PlayerInRange == true && Input.GetKeyDown(KeyCode.E))
+        if (PlayerInRange == true && Input.GetKeyDown(KeyCode.E) && mana.value != 0)
         {
             Debug.Log("COw");
             soilSprite.sprite = till;
@@ -33,9 +36,16 @@ public class RealSoil : MonoBehaviour {
     }
     protected void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        if (otherCollider.CompareTag("Detector"))
+        if (otherCollider.CompareTag("Detector") && SimpleSoil.isTargetActive == false)
         {
-            
+            SimpleSoil.isTargetActive = true;
+            if (SimpleSoil.collided > 1)
+            {
+                target.SetActive(false);
+                SimpleSoil.collided -= 1;
+            }
+            SimpleSoil.collided += 1;
+            target.SetActive(true);
             soilSprite.color = new Color(.8f, .8f, .8f);
             Debug.Log("C");
             PlayerInRange = true;
@@ -46,9 +56,12 @@ public class RealSoil : MonoBehaviour {
     {
         if (otherCollider.CompareTag("Detector"))
         {
+            SimpleSoil.isTargetActive = false;
+            target.SetActive(false  );
             soilSprite.color = new Color(1f, 1f, 1f);
             Debug.Log("D");
             PlayerInRange = false;
+            
         }
     }
 }
