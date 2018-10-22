@@ -5,13 +5,18 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     [SerializeField] private Slider mana;
+    [SerializeField] private GameObject pausePanel;
     public float movementMultiplier = 10.0f;
     Vector2 dir;
     Vector3 location;
     RaycastHit2D hit;
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if (pausePanel.activeInHierarchy)
+        {
+            
+        }
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             location = (transform.position + new Vector3(-1f, -.2f, 0f));
             hit = Physics2D.Raycast(location, new Vector2(-0.3f, 0f), .3f);
