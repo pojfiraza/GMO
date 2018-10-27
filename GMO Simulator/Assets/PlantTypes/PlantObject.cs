@@ -18,10 +18,8 @@ public class PlantObject : MonoBehaviour {
     }
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.E) && this.growthStages.Length > dayz / ((this.growth-1) / (growthStages.Length-1)))
+        if(Input.GetKeyUp(KeyCode.E) && growth > dayz + ((this.growth - 1) % (growthStages.Length - 1)))
         {
-            Debug.Log("MOE "+ this.growthStages.Length);
-            isRipe = false;
             Debug.Log(dayz);
             if(dayz / ((this.growth - 1) / (growthStages.Length - 1)) == growthStages.Length - 2 && delay!=0) 
             {
@@ -29,9 +27,10 @@ public class PlantObject : MonoBehaviour {
                 dayz -= 1;
             }
             else gameObject.GetComponent<SpriteRenderer>().sprite = growthStages[dayz / ((this.growth - 1) / (growthStages.Length - 1))];
-        }else if (Input.GetKeyUp(KeyCode.E) && growth == dayz+3)
+        }else if (Input.GetKeyUp(KeyCode.E) && growth <= dayz+ ((this.growth - 1) % (growthStages.Length - 1)))
         {
-            
+            gameObject.GetComponent<SpriteRenderer>().sprite = growthStages[growthStages.Length - 1];
+            Debug.Log("Dayz:" + dayz + " Growth: " + growth);
             isRipe = true;
         }
     }

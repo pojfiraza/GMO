@@ -19,7 +19,7 @@ public class RealSoil : MonoBehaviour {
     private void Awake()
     {
         soilSprite = gameObject.GetComponent<SpriteRenderer>();
-        target = this.gameObject.transform.GetChild(1).gameObject;
+        target = this.gameObject.transform.GetChild(this.gameObject.transform.childCount - 1).gameObject;
     }
     void Update () {
 
@@ -31,7 +31,7 @@ public class RealSoil : MonoBehaviour {
         }
         else if (PlayerInRange == true && Input.GetKeyDown(KeyCode.R) && mana.value != 0)
         {
-            if(this.gameObject.transform.GetChild(0).gameObject.activeSelf == false)
+            if(this.gameObject.transform.childCount == 1)
             {
                 Debug.Log("Ca");
                 plant = Instantiate(plantList[0], gameObject.transform);
