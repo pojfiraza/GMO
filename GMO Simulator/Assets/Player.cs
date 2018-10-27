@@ -10,11 +10,11 @@ public class Player : MonoBehaviour {
     Vector2 dir;
     Vector3 location;
     RaycastHit2D hit;
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update() {
         if (pausePanel.activeInHierarchy)
         {
-            
+
         }
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
@@ -27,14 +27,14 @@ public class Player : MonoBehaviour {
         else if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)))
         {
             location = (transform.position + new Vector3(0f, 1f, 0f));
-            hit = Physics2D.Raycast(location, new Vector2(0f,.3f),.3f);
+            hit = Physics2D.Raycast(location, new Vector2(0f, .3f), .3f);
             dir = Vector2.up;
             transform.Translate(Vector2.up * movementMultiplier * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             location = (transform.position + new Vector3(1f, -.2f, 0f));
-            hit = Physics2D.Raycast(location, new Vector2(0.3f, 0f),.3f);
+            hit = Physics2D.Raycast(location, new Vector2(0.3f, 0f), .3f);
             dir = Vector2.right;
             transform.Translate(Vector2.right * movementMultiplier * Time.deltaTime);
         }
@@ -47,17 +47,17 @@ public class Player : MonoBehaviour {
         }
         Debug.DrawRay(location, dir, Color.green);
 
-        if (hit.collider != null && hit.collider.tag != "Player")
+        if (hit.collider != null && hit.collider.tag != "Player" && Input.anyKey)
         {
             hit.transform.SendMessage("HitByRay");
         }
-            
-        if (Input.GetKeyDown(KeyCode.E))
+
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.R))
         {
-            movementMultiplier = 5.00f;
-            mana.value -= 3;
+            movementMultiplier = 2.00f;
+            if (hit.transform.tag =="Soil" )mana.value -= 3;
         }
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyDown(KeyCode.R))
         {
             movementMultiplier = 10.00f;
 

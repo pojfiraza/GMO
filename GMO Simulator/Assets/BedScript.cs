@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.Collections;   
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,15 +11,27 @@ public class BedScript : MonoBehaviour {
     [SerializeField] GameObject weatherPanel;
     int temp = 0;
     Image weather;
+    GameObject[] Soils;
     private void Awake()
     {
         weather = weatherPanel.GetComponent<Image>();
+        Soils = GameObject.FindGameObjectsWithTag("Soil");
+
     }
     private void HitByRay()
     {
 
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
+            for(int z = 0; z<Soils.Length; z++)
+            {
+                if (Soils[z].transform.GetChild(0).gameObject.activeSelf == true)
+                {
+                    PlantObject a =Soils[z].transform.GetChild(0).gameObject.GetComponent<PlantObject>();
+                    a.dayz += 1;
+                }
+                
+            }
             int value = Random.Range(0, 105);
             if (value < 40)
             {

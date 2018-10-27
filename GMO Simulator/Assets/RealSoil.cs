@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class RealSoil : MonoBehaviour {
 
     // Use this for initialization
-    protected bool PlayerInRange = false    ;
+    protected bool PlayerInRange = false;
     private SpriteRenderer soilSprite;
     [SerializeField] private Sprite till;
     [SerializeField] private Slider mana;
+    [SerializeField] private GameObject[] plantList = new GameObject[3];
     GameObject target;
+    GameObject plant;
 
 
     // Update is called once per frame
@@ -23,22 +25,36 @@ public class RealSoil : MonoBehaviour {
 
         if (PlayerInRange == true && Input.GetKeyDown(KeyCode.E) && mana.value != 0)
         {
-            Debug.Log("COw");
+            Debug.Log("Cow");
             soilSprite.sprite = till;
             soilSprite.transform.position = gameObject.transform.position;
         }
-        else if (PlayerInRange == true && Input.GetKeyDown(KeyCode.R))
+        else if (PlayerInRange == true && Input.GetKeyDown(KeyCode.R) && mana.value != 0)
         {
-            GameObject plant= this.gameObject.transform.GetChild(0).gameObject;
+            if(this.gameObject.transform.GetChild(0).gameObject.activeSelf == false)
+            {
+                Debug.Log("Ca");
+                plant = Instantiate(plantList[0], gameObject.transform);
+                plant.transform.parent = gameObject.transform;
+                plant.transform.SetAsFirstSibling();
+                plant.SetActive(true);
+            }
+            //GameObject plant= this.gameObject.transform.GetChild(0).gameObject;
+            Debug.Log(plant.GetComponent<PlantObject>().isRipe);
+            if (plant.GetComponent<PlantObject>().isRipe == true)
+            {
+                Debug.Log(plant.GetComponent<PlantObject>().isRipe);
+                Object.Destroy(plant);
+                plant.GetComponent<PlantObject>().isRipe = false;
+                return;
+            }
             plant.SetActive(true);
-            soilSprite.sprite = till;
             soilSprite.transform.position = gameObject.transform.position;
         }
-        if (target.activeSelf)
+        if (target.activeSelf && Input.anyKey)
         {
             target.SetActive(false);
             soilSprite.color = new Color(1f, 1f, 1f);
-            Debug.Log("C");
             PlayerInRange = false;
         }
     }
@@ -47,8 +63,6 @@ public class RealSoil : MonoBehaviour {
         
         target.SetActive(true);
         soilSprite.color = new Color(.8f, .8f, .8f);
-        Debug.Log("C");
         PlayerInRange = true;
-        Debug.Log("I was hit by a Ray");
     }
 }
