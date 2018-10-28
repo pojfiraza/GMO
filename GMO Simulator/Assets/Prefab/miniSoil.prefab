@@ -110,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   till: {fileID: 21300000, guid: 05d4b19096271e44faeae593b074a66e, type: 3}
   mana: {fileID: 0}
+  inventory: {fileID: 0}
   plantList:
   - {fileID: 1534776097638978, guid: 11e0253e7add73343b43886f257b5149, type: 2}
   - {fileID: 1534776097638978, guid: 11e0253e7add73343b43886f257b5149, type: 2}

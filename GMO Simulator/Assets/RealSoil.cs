@@ -10,6 +10,7 @@ public class RealSoil : MonoBehaviour {
     private SpriteRenderer soilSprite;
     [SerializeField] private Sprite till;
     [SerializeField] private Slider mana;
+    [SerializeField] private InsertSlot inventory;
     [SerializeField] private GameObject[] plantList = new GameObject[3];
     GameObject target;
     GameObject plant;
@@ -25,7 +26,6 @@ public class RealSoil : MonoBehaviour {
 
         if (PlayerInRange == true && Input.GetKeyDown(KeyCode.E) && mana.value != 0)
         {
-            Debug.Log("Cow");
             soilSprite.sprite = till;
             soilSprite.transform.position = gameObject.transform.position;
         }
@@ -33,8 +33,8 @@ public class RealSoil : MonoBehaviour {
         {
             if(this.gameObject.transform.childCount == 1)
             {
-                Debug.Log("Ca");
                 plant = Instantiate(plantList[0], gameObject.transform);
+                //plant.GetComponent<PlantObject>().makePlants(3, plant.GetComponent<PlantObject>());
                 plant.transform.parent = gameObject.transform;
                 plant.transform.SetAsFirstSibling();
                 plant.SetActive(true);
@@ -43,7 +43,23 @@ public class RealSoil : MonoBehaviour {
             Debug.Log(plant.GetComponent<PlantObject>().isRipe);
             if (plant.GetComponent<PlantObject>().isRipe == true)
             {
-                Debug.Log(plant.GetComponent<PlantObject>().isRipe);
+                for(int c = 0; c < inventory.slots.Length; c++)
+                {
+
+                    if(inventory.slots[c] == null)
+                    {
+                        Debug.Log("SSAS");
+                        inventory.slots[c] = Instantiate(plant);
+                        inventory.slots[c].SetActive(false);
+                        inventory.count[c] += 1;
+                        break;
+                    }
+                    if (plant.GetComponent<PlantObject>().id == inventory.slots[c].GetComponent<PlantObject>().id)
+                    {
+                        inventory.count[c] += 1;
+                        break;
+                    }
+                }
                 Object.Destroy(plant);
                 plant.GetComponent<PlantObject>().isRipe = false;
                 return;

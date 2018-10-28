@@ -165,6 +165,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -178,6 +183,7 @@ GameObject:
   - component: {fileID: 5933987}
   - component: {fileID: 5933989}
   - component: {fileID: 5933988}
+  - component: {fileID: 5933990}
   m_Layer: 2
   m_Name: Panel (11)
   m_TagString: Untagged
@@ -237,6 +243,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5933986}
   m_CullTransparentMesh: 0
+--- !u!114 &5933990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 5933986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!4 &11776288 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4113917270557668, guid: 253bb4056e3216042bc42b262eed8a8a,
@@ -294,9 +312,88 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &29483304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 29483305}
+  - component: {fileID: 29483306}
+  m_Layer: 0
+  m_Name: Sprite Mask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &29483305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 29483304}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1, y: 19, z: -5265.581}
+  m_LocalScale: {x: 17.53055, y: 17.53055, z: 58.435165}
+  m_Children: []
+  m_Father: {fileID: 1339538287}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!331 &29483306
+SpriteMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 29483304}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 8526e99505d6ea441810e5b103b915e8, type: 3}
+  m_MaskAlphaCutoff: 0.2
+  m_FrontSortingLayerID: 0
+  m_BackSortingLayerID: 0
+  m_FrontSortingLayer: 0
+  m_BackSortingLayer: 0
+  m_FrontSortingOrder: 0
+  m_BackSortingOrder: 0
+  m_IsCustomRangeActive: 0
+  m_SpriteSortPoint: 0
 --- !u!4 &32442313 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4113917270557668, guid: 253bb4056e3216042bc42b262eed8a8a,
@@ -359,6 +456,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -414,6 +516,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -469,6 +576,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -529,6 +641,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -589,6 +706,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -644,6 +766,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -794,6 +921,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -849,6 +981,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -909,6 +1046,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -964,6 +1106,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -1056,6 +1203,7 @@ GameObject:
   - component: {fileID: 113277413}
   - component: {fileID: 113277415}
   - component: {fileID: 113277414}
+  - component: {fileID: 113277416}
   m_Layer: 2
   m_Name: Panel (20)
   m_TagString: Untagged
@@ -1115,6 +1263,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 113277412}
   m_CullTransparentMesh: 0
+--- !u!114 &113277416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 113277412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1001 &118458155
 Prefab:
   m_ObjectHideFlags: 0
@@ -1167,6 +1327,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -1242,6 +1407,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -1312,6 +1482,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -1367,6 +1542,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -1505,6 +1685,7 @@ GameObject:
   - component: {fileID: 228738777}
   - component: {fileID: 228738779}
   - component: {fileID: 228738778}
+  - component: {fileID: 228738780}
   m_Layer: 2
   m_Name: Panel (14)
   m_TagString: Untagged
@@ -1564,6 +1745,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 228738776}
   m_CullTransparentMesh: 0
+--- !u!114 &228738780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 228738776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1 &231327333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,6 +1767,7 @@ GameObject:
   - component: {fileID: 231327334}
   - component: {fileID: 231327336}
   - component: {fileID: 231327335}
+  - component: {fileID: 231327337}
   m_Layer: 2
   m_Name: Panel (30)
   m_TagString: Untagged
@@ -1633,6 +1827,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 231327333}
   m_CullTransparentMesh: 0
+--- !u!114 &231327337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 231327333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!4 &234029058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4113917270557668, guid: 253bb4056e3216042bc42b262eed8a8a,
@@ -1690,6 +1896,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -1745,6 +1956,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -1839,6 +2055,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -1894,6 +2115,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -1907,6 +2133,7 @@ GameObject:
   - component: {fileID: 258124501}
   - component: {fileID: 258124503}
   - component: {fileID: 258124502}
+  - component: {fileID: 258124504}
   m_Layer: 2
   m_Name: Panel (19)
   m_TagString: Untagged
@@ -1966,6 +2193,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 258124500}
   m_CullTransparentMesh: 0
+--- !u!114 &258124504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258124500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!4 &259681106 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4113917270557668, guid: 253bb4056e3216042bc42b262eed8a8a,
@@ -2023,6 +2262,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -2078,6 +2322,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -2138,6 +2387,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -2171,6 +2425,7 @@ GameObject:
   - component: {fileID: 312584381}
   - component: {fileID: 312584383}
   - component: {fileID: 312584382}
+  - component: {fileID: 312584384}
   m_Layer: 2
   m_Name: Panel (28)
   m_TagString: Untagged
@@ -2230,6 +2485,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 312584380}
   m_CullTransparentMesh: 0
+--- !u!114 &312584384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 312584380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1001 &315734982
 Prefab:
   m_ObjectHideFlags: 0
@@ -2282,6 +2549,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -2342,6 +2614,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -2407,6 +2684,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -2462,6 +2744,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -2517,6 +2804,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -2530,6 +2822,7 @@ GameObject:
   - component: {fileID: 338105956}
   - component: {fileID: 338105958}
   - component: {fileID: 338105957}
+  - component: {fileID: 338105959}
   m_Layer: 2
   m_Name: Inventory Slots
   m_TagString: Untagged
@@ -2621,6 +2914,52 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 338105955}
   m_CullTransparentMesh: 0
+--- !u!114 &338105959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338105955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d113dbcd0b2ea2e4ba38d07f3bd42c97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  count: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  mana: {fileID: 0}
 --- !u!4 &341832056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4113917270557668, guid: 253bb4056e3216042bc42b262eed8a8a,
@@ -2678,6 +3017,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -2733,6 +3077,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -2788,6 +3137,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -2853,6 +3207,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -2908,6 +3267,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -2968,6 +3332,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -3028,6 +3397,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -3088,6 +3462,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -3148,6 +3527,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -3213,6 +3597,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -3293,6 +3682,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -3311,6 +3705,7 @@ GameObject:
   - component: {fileID: 480055665}
   - component: {fileID: 480055667}
   - component: {fileID: 480055666}
+  - component: {fileID: 480055668}
   m_Layer: 2
   m_Name: Panel (8)
   m_TagString: Untagged
@@ -3370,6 +3765,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 480055664}
   m_CullTransparentMesh: 0
+--- !u!114 &480055668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 480055664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1001 &485465730
 Prefab:
   m_ObjectHideFlags: 0
@@ -3422,6 +3829,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -3487,6 +3899,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -3542,6 +3959,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -3631,6 +4053,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -3686,6 +4113,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -3756,6 +4188,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -3779,6 +4216,7 @@ GameObject:
   - component: {fileID: 533826040}
   - component: {fileID: 533826042}
   - component: {fileID: 533826041}
+  - component: {fileID: 533826043}
   m_Layer: 2
   m_Name: Panel (10)
   m_TagString: Untagged
@@ -3838,6 +4276,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 533826039}
   m_CullTransparentMesh: 0
+--- !u!114 &533826043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 533826039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!4 &537215449 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4113917270557668, guid: 253bb4056e3216042bc42b262eed8a8a,
@@ -3895,6 +4345,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -3955,6 +4410,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -4176,6 +4636,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -4231,6 +4696,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -4286,6 +4756,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -4346,6 +4821,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -4406,6 +4886,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -4481,6 +4966,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -4536,6 +5026,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -4574,6 +5069,7 @@ GameObject:
   - component: {fileID: 685160972}
   - component: {fileID: 685160974}
   - component: {fileID: 685160973}
+  - component: {fileID: 685160975}
   m_Layer: 2
   m_Name: Panel (27)
   m_TagString: Untagged
@@ -4633,6 +5129,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 685160971}
   m_CullTransparentMesh: 0
+--- !u!114 &685160975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685160971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!4 &688455968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4113917270557668, guid: 253bb4056e3216042bc42b262eed8a8a,
@@ -4690,6 +5198,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -4750,6 +5263,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -4810,6 +5328,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -4865,6 +5388,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -4920,6 +5448,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -4980,6 +5513,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -5045,6 +5583,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -5105,6 +5648,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -5118,75 +5666,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4113917270557668, guid: 253bb4056e3216042bc42b262eed8a8a,
     type: 2}
   m_PrefabInternal: {fileID: 1184876029}
---- !u!1 &770440039
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 770440040}
-  - component: {fileID: 770440042}
-  - component: {fileID: 770440041}
-  m_Layer: 2
-  m_Name: Panel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &770440040
+--- !u!224 &770440040 stripped
 RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 770440039}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 338105956}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -78.367546, y: 172.07536}
-  m_SizeDelta: {x: -156.73001, y: -344.174}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &770440041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 770440039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.8962264, g: 0.760632, b: 0.5453453, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &770440042
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 770440039}
-  m_CullTransparentMesh: 0
+  m_CorrespondingSourceObject: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1650782210}
 --- !u!1 &770700950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5401,6 +5885,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -5456,6 +5945,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -5521,6 +6015,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -5534,6 +6033,7 @@ GameObject:
   - component: {fileID: 818852299}
   - component: {fileID: 818852301}
   - component: {fileID: 818852300}
+  - component: {fileID: 818852302}
   m_Layer: 2
   m_Name: Panel (5)
   m_TagString: Untagged
@@ -5593,6 +6093,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 818852298}
   m_CullTransparentMesh: 0
+--- !u!114 &818852302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 818852298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1001 &819438791
 Prefab:
   m_ObjectHideFlags: 0
@@ -5645,6 +6157,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -5705,6 +6222,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -5760,6 +6282,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -5815,6 +6342,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -5870,6 +6402,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -5925,6 +6462,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -5980,6 +6522,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -6119,6 +6666,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -6184,6 +6736,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -6239,6 +6796,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -6294,6 +6856,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -6354,6 +6921,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -6409,6 +6981,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -6464,6 +7041,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -6519,6 +7101,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -6574,6 +7161,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -6683,6 +7275,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -6743,6 +7340,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -6766,6 +7368,7 @@ GameObject:
   - component: {fileID: 988369460}
   - component: {fileID: 988369462}
   - component: {fileID: 988369461}
+  - component: {fileID: 988369463}
   m_Layer: 2
   m_Name: Panel (2)
   m_TagString: Untagged
@@ -6825,6 +7428,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 988369459}
   m_CullTransparentMesh: 0
+--- !u!114 &988369463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 988369459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1001 &994548897
 Prefab:
   m_ObjectHideFlags: 0
@@ -6877,6 +7492,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -6895,6 +7515,7 @@ GameObject:
   - component: {fileID: 1000357295}
   - component: {fileID: 1000357297}
   - component: {fileID: 1000357296}
+  - component: {fileID: 1000357298}
   m_Layer: 2
   m_Name: Panel (31)
   m_TagString: Untagged
@@ -6954,6 +7575,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1000357294}
   m_CullTransparentMesh: 0
+--- !u!114 &1000357298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1000357294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1001 &1005223031
 Prefab:
   m_ObjectHideFlags: 0
@@ -7006,6 +7639,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -7061,6 +7699,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -7121,6 +7764,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -7170,7 +7818,7 @@ RectTransform:
   - {fileID: 338105956}
   - {fileID: 1307859691}
   m_Father: {fileID: 1339538287}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7241,6 +7889,7 @@ GameObject:
   - component: {fileID: 1044970207}
   - component: {fileID: 1044970209}
   - component: {fileID: 1044970208}
+  - component: {fileID: 1044970210}
   m_Layer: 2
   m_Name: Panel (18)
   m_TagString: Untagged
@@ -7300,6 +7949,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1044970206}
   m_CullTransparentMesh: 0
+--- !u!114 &1044970210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1044970206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1 &1045318550
 GameObject:
   m_ObjectHideFlags: 0
@@ -7421,6 +8082,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -7481,6 +8147,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -7696,6 +8367,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -7751,6 +8427,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -7821,6 +8502,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -7876,6 +8562,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -7936,6 +8627,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -7991,6 +8687,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -8140,6 +8841,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -8153,6 +8859,7 @@ GameObject:
   - component: {fileID: 1152135219}
   - component: {fileID: 1152135221}
   - component: {fileID: 1152135220}
+  - component: {fileID: 1152135222}
   m_Layer: 2
   m_Name: Panel (4)
   m_TagString: Untagged
@@ -8212,6 +8919,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1152135218}
   m_CullTransparentMesh: 0
+--- !u!114 &1152135222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1152135218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!4 &1152794328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4113917270557668, guid: 253bb4056e3216042bc42b262eed8a8a,
@@ -8227,6 +8946,7 @@ GameObject:
   - component: {fileID: 1154398909}
   - component: {fileID: 1154398911}
   - component: {fileID: 1154398910}
+  - component: {fileID: 1154398912}
   m_Layer: 2
   m_Name: Panel (22)
   m_TagString: Untagged
@@ -8286,6 +9006,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1154398908}
   m_CullTransparentMesh: 0
+--- !u!114 &1154398912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1154398908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1001 &1158754262
 Prefab:
   m_ObjectHideFlags: 0
@@ -8338,6 +9070,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -8393,6 +9130,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -8448,6 +9190,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -11280,6 +12027,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -11345,6 +12097,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -11410,6 +12167,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -11470,6 +12232,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -11488,6 +12255,7 @@ GameObject:
   - component: {fileID: 1221500635}
   - component: {fileID: 1221500637}
   - component: {fileID: 1221500636}
+  - component: {fileID: 1221500638}
   m_Layer: 2
   m_Name: Panel (7)
   m_TagString: Untagged
@@ -11547,6 +12315,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1221500634}
   m_CullTransparentMesh: 0
+--- !u!114 &1221500638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1221500634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!4 &1236447727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4113917270557668, guid: 253bb4056e3216042bc42b262eed8a8a,
@@ -11609,6 +12389,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -11728,6 +12513,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -11746,6 +12536,7 @@ GameObject:
   - component: {fileID: 1283783748}
   - component: {fileID: 1283783750}
   - component: {fileID: 1283783749}
+  - component: {fileID: 1283783751}
   m_Layer: 2
   m_Name: Panel (9)
   m_TagString: Untagged
@@ -11805,6 +12596,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1283783747}
   m_CullTransparentMesh: 0
+--- !u!114 &1283783751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1283783747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1 &1297290740
 GameObject:
   m_ObjectHideFlags: 0
@@ -11815,6 +12618,7 @@ GameObject:
   - component: {fileID: 1297290741}
   - component: {fileID: 1297290743}
   - component: {fileID: 1297290742}
+  - component: {fileID: 1297290744}
   m_Layer: 2
   m_Name: Panel (21)
   m_TagString: Untagged
@@ -11874,6 +12678,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1297290740}
   m_CullTransparentMesh: 0
+--- !u!114 &1297290744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1297290740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!4 &1297807163 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4113917270557668, guid: 253bb4056e3216042bc42b262eed8a8a,
@@ -11941,6 +12757,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -11996,6 +12817,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -12168,6 +12994,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -12223,6 +13054,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -12278,6 +13114,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -12333,6 +13174,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -12388,6 +13234,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -12412,7 +13263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1339538287
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12423,6 +13274,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 29483305}
   - {fileID: 1042321836}
   m_Father: {fileID: 1361334475}
   m_RootOrder: 1
@@ -12476,6 +13328,7 @@ GameObject:
   - component: {fileID: 1341162760}
   - component: {fileID: 1341162762}
   - component: {fileID: 1341162761}
+  - component: {fileID: 1341162763}
   m_Layer: 2
   m_Name: Panel (24)
   m_TagString: Untagged
@@ -12535,6 +13388,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1341162759}
   m_CullTransparentMesh: 0
+--- !u!114 &1341162763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1341162759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1001 &1343856403
 Prefab:
   m_ObjectHideFlags: 0
@@ -12587,6 +13452,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -12600,6 +13470,7 @@ GameObject:
   - component: {fileID: 1351295971}
   - component: {fileID: 1351295973}
   - component: {fileID: 1351295972}
+  - component: {fileID: 1351295974}
   m_Layer: 2
   m_Name: Panel (25)
   m_TagString: Untagged
@@ -12659,6 +13530,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1351295970}
   m_CullTransparentMesh: 0
+--- !u!114 &1351295974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1351295970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1 &1361334471
 GameObject:
   m_ObjectHideFlags: 0
@@ -12838,6 +13721,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -12898,6 +13786,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -12953,6 +13846,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -13077,6 +13975,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -13137,6 +14040,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -13150,6 +14058,7 @@ GameObject:
   - component: {fileID: 1391163409}
   - component: {fileID: 1391163411}
   - component: {fileID: 1391163410}
+  - component: {fileID: 1391163412}
   m_Layer: 2
   m_Name: Panel (23)
   m_TagString: Untagged
@@ -13209,6 +14118,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1391163408}
   m_CullTransparentMesh: 0
+--- !u!114 &1391163412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1391163408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!4 &1402365244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4113917270557668, guid: 253bb4056e3216042bc42b262eed8a8a,
@@ -13266,6 +14187,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -13326,6 +14252,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -13381,6 +14312,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -13436,6 +14372,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -13491,6 +14432,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -13546,6 +14492,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -13601,6 +14552,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -13829,6 +14785,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -13978,6 +14939,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -14033,6 +14999,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -14093,6 +15064,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -14148,6 +15124,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -14208,6 +15189,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -14263,6 +15249,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -14333,6 +15324,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -14388,6 +15384,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -14448,6 +15449,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -14461,6 +15467,7 @@ GameObject:
   - component: {fileID: 1512131871}
   - component: {fileID: 1512131873}
   - component: {fileID: 1512131872}
+  - component: {fileID: 1512131874}
   m_Layer: 2
   m_Name: Panel (12)
   m_TagString: Untagged
@@ -14520,6 +15527,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1512131870}
   m_CullTransparentMesh: 0
+--- !u!114 &1512131874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1512131870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1 &1515478989
 GameObject:
   m_ObjectHideFlags: 0
@@ -17398,6 +18417,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -17581,6 +18605,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -17636,6 +18665,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -17649,6 +18683,7 @@ GameObject:
   - component: {fileID: 1531127814}
   - component: {fileID: 1531127816}
   - component: {fileID: 1531127815}
+  - component: {fileID: 1531127817}
   m_Layer: 2
   m_Name: Panel (6)
   m_TagString: Untagged
@@ -17708,6 +18743,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1531127813}
   m_CullTransparentMesh: 0
+--- !u!114 &1531127817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1531127813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1001 &1532620522
 Prefab:
   m_ObjectHideFlags: 0
@@ -17760,6 +18807,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -17820,6 +18872,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -17885,6 +18942,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -17945,6 +19007,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18000,6 +19067,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18055,6 +19127,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18110,6 +19187,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18170,6 +19252,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18230,6 +19317,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18285,6 +19377,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18350,6 +19447,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18420,6 +19522,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18433,6 +19540,111 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4113917270557668, guid: 253bb4056e3216042bc42b262eed8a8a,
     type: 2}
   m_PrefabInternal: {fileID: 1717913728}
+--- !u!1001 &1650782210
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 338105956}
+    m_Modifications:
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -78.367546
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 172.07536
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -156.73001
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -344.174
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224567866812739258, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114159084711283972, guid: 9e8894ff539a6d346bcaf22b569382d9,
+        type: 2}
+      propertyPath: bag
+      value: 
+      objectReference: {fileID: 1949222352}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e8894ff539a6d346bcaf22b569382d9, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1651442968
 Prefab:
   m_ObjectHideFlags: 0
@@ -18485,6 +19697,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18609,6 +19826,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18664,6 +19886,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18724,6 +19951,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18779,6 +20011,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18846,6 +20083,11 @@ Prefab:
       propertyPath: mana
       value: 
       objectReference: {fileID: 65665842}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -18901,6 +20143,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -19028,6 +20275,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -19088,6 +20340,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -19143,6 +20400,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -19218,6 +20480,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -19273,6 +20540,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -19328,6 +20600,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -19388,6 +20665,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -19448,6 +20730,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -19461,6 +20748,7 @@ GameObject:
   - component: {fileID: 1801561175}
   - component: {fileID: 1801561177}
   - component: {fileID: 1801561176}
+  - component: {fileID: 1801561178}
   m_Layer: 2
   m_Name: Panel (17)
   m_TagString: Untagged
@@ -19520,6 +20808,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1801561174}
   m_CullTransparentMesh: 0
+--- !u!114 &1801561178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1801561174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1 &1801950902
 GameObject:
   m_ObjectHideFlags: 0
@@ -19592,6 +20892,7 @@ GameObject:
   - component: {fileID: 1802484635}
   - component: {fileID: 1802484637}
   - component: {fileID: 1802484636}
+  - component: {fileID: 1802484638}
   m_Layer: 2
   m_Name: Panel (26)
   m_TagString: Untagged
@@ -19651,6 +20952,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1802484634}
   m_CullTransparentMesh: 0
+--- !u!114 &1802484638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1802484634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1001 &1802704207
 Prefab:
   m_ObjectHideFlags: 0
@@ -19703,6 +21016,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -19721,6 +21039,7 @@ GameObject:
   - component: {fileID: 1804013615}
   - component: {fileID: 1804013617}
   - component: {fileID: 1804013616}
+  - component: {fileID: 1804013618}
   m_Layer: 2
   m_Name: Panel (13)
   m_TagString: Untagged
@@ -19780,6 +21099,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1804013614}
   m_CullTransparentMesh: 0
+--- !u!114 &1804013618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1804013614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1001 &1804893122
 Prefab:
   m_ObjectHideFlags: 0
@@ -19832,6 +21163,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -19897,6 +21233,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -19952,6 +21293,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -19965,6 +21311,7 @@ GameObject:
   - component: {fileID: 1852571528}
   - component: {fileID: 1852571530}
   - component: {fileID: 1852571529}
+  - component: {fileID: 1852571531}
   m_Layer: 2
   m_Name: Panel (16)
   m_TagString: Untagged
@@ -20024,6 +21371,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1852571527}
   m_CullTransparentMesh: 0
+--- !u!114 &1852571531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1852571527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1001 &1854966278
 Prefab:
   m_ObjectHideFlags: 0
@@ -20076,6 +21435,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -20131,6 +21495,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -20260,6 +21629,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -20320,6 +21694,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -20375,6 +21754,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -20546,6 +21930,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -20606,6 +21995,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -20661,6 +22055,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -20879,6 +22278,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rucksack: {fileID: 1339538286}
+  itemz:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &1950190543
 Prefab:
   m_ObjectHideFlags: 0
@@ -20931,6 +22363,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -20986,6 +22423,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -21046,6 +22488,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -21059,6 +22506,7 @@ GameObject:
   - component: {fileID: 1959120021}
   - component: {fileID: 1959120023}
   - component: {fileID: 1959120022}
+  - component: {fileID: 1959120024}
   m_Layer: 2
   m_Name: Panel (15)
   m_TagString: Untagged
@@ -21118,6 +22566,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1959120020}
   m_CullTransparentMesh: 0
+--- !u!114 &1959120024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1959120020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1001 &1960552868
 Prefab:
   m_ObjectHideFlags: 0
@@ -21170,6 +22630,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -21230,6 +22695,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -21295,6 +22765,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -21350,6 +22825,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -21368,6 +22848,7 @@ GameObject:
   - component: {fileID: 1984537296}
   - component: {fileID: 1984537298}
   - component: {fileID: 1984537297}
+  - component: {fileID: 1984537299}
   m_Layer: 2
   m_Name: Panel (29)
   m_TagString: Untagged
@@ -21427,6 +22908,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1984537295}
   m_CullTransparentMesh: 0
+--- !u!114 &1984537299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1984537295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!1001 &1986644083
 Prefab:
   m_ObjectHideFlags: 0
@@ -21479,6 +22972,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -21534,6 +23032,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -21562,6 +23065,7 @@ GameObject:
   - component: {fileID: 2015907380}
   - component: {fileID: 2015907382}
   - component: {fileID: 2015907381}
+  - component: {fileID: 2015907383}
   m_Layer: 2
   m_Name: Panel (3)
   m_TagString: Untagged
@@ -21621,6 +23125,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2015907379}
   m_CullTransparentMesh: 0
+--- !u!114 &2015907383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2015907379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}
 --- !u!4 &2028893009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4113917270557668, guid: 253bb4056e3216042bc42b262eed8a8a,
@@ -21683,6 +23199,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -21738,6 +23259,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -21808,6 +23334,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -21863,6 +23394,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -21952,6 +23488,11 @@ Prefab:
       propertyPath: m_TagString
       value: Soil
       objectReference: {fileID: 0}
+    - target: {fileID: 114155953317008096, guid: 253bb4056e3216042bc42b262eed8a8a,
+        type: 2}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 338105959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253bb4056e3216042bc42b262eed8a8a, type: 2}
   m_IsPrefabAsset: 0
@@ -21970,6 +23511,7 @@ GameObject:
   - component: {fileID: 2146235462}
   - component: {fileID: 2146235464}
   - component: {fileID: 2146235463}
+  - component: {fileID: 2146235465}
   m_Layer: 2
   m_Name: Panel (1)
   m_TagString: Untagged
@@ -22029,3 +23571,15 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2146235461}
   m_CullTransparentMesh: 0
+--- !u!114 &2146235465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2146235461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24acf001a131df429e77af3a68469a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bag: {fileID: 1949222352}

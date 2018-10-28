@@ -57,7 +57,7 @@ public class Player : MonoBehaviour {
             movementMultiplier = 2.00f;
             if (hit.transform.tag =="Soil" )mana.value -= 3;
         }
-        if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyUp(KeyCode.R))
         {
             movementMultiplier = 10.00f;
 

@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlantObject : MonoBehaviour {
     public int dayz = 0;
     int delay = 0;
-    private void Awake()
+    private void Start()
     {
         delay = ((this.growth - 1) % (growthStages.Length - 1));
         for(int x = 0; x<2; x++)
@@ -20,7 +20,7 @@ public class PlantObject : MonoBehaviour {
     {
         if(Input.GetKeyUp(KeyCode.E) && growth > dayz + ((this.growth - 1) % (growthStages.Length - 1)))
         {
-            Debug.Log(dayz);
+
             if(dayz / ((this.growth - 1) / (growthStages.Length - 1)) == growthStages.Length - 2 && delay!=0) 
             {
                 delay -= 1;
@@ -30,23 +30,23 @@ public class PlantObject : MonoBehaviour {
         }else if (Input.GetKeyUp(KeyCode.E) && growth <= dayz+ ((this.growth - 1) % (growthStages.Length - 1)))
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = growthStages[growthStages.Length - 1];
-            Debug.Log("Dayz:" + dayz + " Growth: " + growth);
             isRipe = true;
         }
     }
     //Name of Plant
     [SerializeField] string pName;
     //Important Stats
-    [SerializeField] int maxStat;
-    [SerializeField] int dnaSize;
-    [SerializeField] int growth;
-    [SerializeField] int price;
-    [SerializeField] int seeds;
-    [SerializeField] int reGrow;
+    [SerializeField] public int maxStat;
+    [SerializeField] public int dnaSize;
+    [SerializeField] public int growth;
+    [SerializeField] public int price;
+    [SerializeField] public int seeds;
+    [SerializeField] public int reGrow;
+    [SerializeField] public Sprite inventoryImage;
     bool isWatered = false;
     public bool isRipe = false;
     //Stats
-    [SerializeField] int[] stats = {0,0,0,0,0};
+    [SerializeField] public  int[] stats = {0,0,0,0,0};
     //Sprite Arr for its growth
     [SerializeField] Sprite[] growthStages;
     //StatNames
@@ -55,7 +55,7 @@ public class PlantObject : MonoBehaviour {
     bool[][] dna = new bool[2][];
 
     //ID
-    String id;
+    public String id;
     //Type of Plant
     [SerializeField] String pType;
 
@@ -95,12 +95,16 @@ public class PlantObject : MonoBehaviour {
         }
     }
     //Create New Seeds for Market ( Seperated By Tier)
-    PlantObject makePlants(int tier,PlantObject type)
+    public PlantObject makePlants(int tier,PlantObject type)
     {
         PlantObject baby = type;
         int maxDNA = 0;
         int c = 0;
         System.Random rand = new System.Random();
+        for (int x = 0; x < 2; x++)
+        {
+            dna[x] = new bool[dnaSize];
+        }
         // DNA
         switch (tier)
         {
@@ -127,7 +131,7 @@ public class PlantObject : MonoBehaviour {
                     c = rand.Next(0,mult + 1);
                     maxDNA = maxDNA - c;
                     if (c == 1) check = true;
-                    baby.dna[y][x] = check;
+                    dna[y][x] = check;
                 }
             }
         }
@@ -178,14 +182,15 @@ public class PlantObject : MonoBehaviour {
     {
         if(pType == "Bobtato")
         {
+            int couchC = 0; 
+            if (baby.isDnaTrue(0))
+            {
+                baby.price += 100;
+                baby.setStats(2, 0);
+            }
             for (int x = 1; x<6; x++)
             {
-                int couchC = 0;
-                if (baby.isDnaTrue(0))
-                {
-                    baby.price += 100;
-                    baby.setStats(2,0);
-                }
+
                 if (baby.isDnaTrue(x) == baby.isDnaTrue(x+5) && baby.isDnaTrue(x) == true)
                 {
                     baby.setStats(x-1, baby.getStats(x - 1) + 10);
@@ -199,19 +204,20 @@ public class PlantObject : MonoBehaviour {
                 {
                     baby.setStats(x-1, baby.getStats(x - 1) - 5);
                 }
-                if(baby.isDnaTrue(11) == true && baby.isDnaTrue(12) == true)
-                {
-                    baby.seeds = 0;
-                }
-                if(baby.isDnaTrue(13) == true)
-                {
-                    baby.setStats(0,baby.getStats(0)+5);
-                    baby.growth += 1;
-                }
-                if (baby.isDnaTrue(14) == true && couchC>2)
-                {
-                    baby.growth += 2;
-                }
+
+            }
+            if (baby.isDnaTrue(11) == true && baby.isDnaTrue(12) == true)
+            {
+                baby.seeds = 0;
+            }
+            if (baby.isDnaTrue(13) == true)
+            {
+                baby.setStats(0, baby.getStats(0) + 10);
+                baby.growth += 1;
+            }
+            if (baby.isDnaTrue(14) == true && couchC > 2)
+            {
+                baby.growth += 2;
             }
 
         }
