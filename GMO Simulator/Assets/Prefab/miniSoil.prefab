@@ -113,8 +113,8 @@ MonoBehaviour:
   inventory: {fileID: 0}
   plantList:
   - {fileID: 1534776097638978, guid: 11e0253e7add73343b43886f257b5149, type: 2}
-  - {fileID: 1534776097638978, guid: 11e0253e7add73343b43886f257b5149, type: 2}
-  - {fileID: 1534776097638978, guid: 11e0253e7add73343b43886f257b5149, type: 2}
+  - {fileID: 1518651886394640, guid: 1b561bfc74043a84db338be658ee0f07, type: 2}
+  - {fileID: 1832020470339168, guid: dab80587884f6e041a89907c9ad873e0, type: 2}
 --- !u!212 &212136654748378330
 SpriteRenderer:
   m_ObjectHideFlags: 1

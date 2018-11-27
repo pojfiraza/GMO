@@ -34,7 +34,9 @@ public class PlantObject : MonoBehaviour {
         }
     }
     //Name of Plant
-    [SerializeField] string pName;
+    [SerializeField] public string pName;
+    [SerializeField] public string description;
+    public string buffs;
     //Important Stats
     [SerializeField] public int maxStat;
     [SerializeField] public int dnaSize;
@@ -42,17 +44,18 @@ public class PlantObject : MonoBehaviour {
     [SerializeField] public int price;
     [SerializeField] public int seeds;
     [SerializeField] public int reGrow;
+    public int tier;
     [SerializeField] public Sprite inventoryImage;
     bool isWatered = false;
     public bool isRipe = false;
     //Stats
     [SerializeField] public  int[] stats = {0,0,0,0,0};
     //Sprite Arr for its growth
-    [SerializeField] Sprite[] growthStages;
+    [SerializeField] public Sprite[] growthStages;
     //StatNames
-    private string[] statName = { "Nutrition:", "Yield:", "Disease Res:", "Cold Res:", "Heat Res:" };
+    private string[] statName = { "Nutri", "Yield", "DiseR", "ColdR", "HeatR" };
     //Dna
-    bool[][] dna = new bool[2][];
+    public bool[][] dna = new bool[2][];
 
     //ID
     public String id;
@@ -178,7 +181,7 @@ public class PlantObject : MonoBehaviour {
         return baby;
     }
     //Bufflist of each Plant
-    PlantObject buffList(PlantObject baby,String pType)
+    public PlantObject buffList(PlantObject baby,String pType)
     {
         if(pType == "Bobtato")
         {
@@ -186,6 +189,7 @@ public class PlantObject : MonoBehaviour {
             if (baby.isDnaTrue(0))
             {
                 baby.price += 100;
+                buffs += " Luck of the Irish\n";
                 baby.setStats(2, 0);
             }
             for (int x = 1; x<6; x++)
@@ -193,30 +197,36 @@ public class PlantObject : MonoBehaviour {
 
                 if (baby.isDnaTrue(x) == baby.isDnaTrue(x+5) && baby.isDnaTrue(x) == true)
                 {
+                    buffs += " "+statName[x-1]+"+10\n";
                     baby.setStats(x-1, baby.getStats(x - 1) + 10);
                 }
                 else if (baby.isDnaTrue(x) == true)
                 {
+                    buffs += " " + statName[x - 1] + "+5\n";
                     baby.setStats(x-1, baby.getStats(x - 1) + 5);
                     couchC += 1;
                 }
                 else if (baby.isDnaTrue(x+5) == true)
                 {
+                    buffs += " " + statName[x - 1] + "-5\n";
                     baby.setStats(x-1, baby.getStats(x - 1) - 5);
                 }
 
             }
             if (baby.isDnaTrue(11) == true && baby.isDnaTrue(12) == true)
             {
+                buffs += " Infertile\n";
                 baby.seeds = 0;
             }
             if (baby.isDnaTrue(13) == true)
             {
+                buffs += " SpudLover\n";
                 baby.setStats(0, baby.getStats(0) + 10);
                 baby.growth += 1;
             }
             if (baby.isDnaTrue(14) == true && couchC > 2)
             {
+                buffs += " CouchPotato\n";
                 baby.growth += 2;
             }
 
@@ -228,23 +238,24 @@ public class PlantObject : MonoBehaviour {
             {
                 if (baby.isDnaTrue(y) == true)
                 {
-                    baby.setStats(y, baby.getStats(y - 1) - 5);
+                    buffs += " " + statName[y - 1] + "-5\n";
+                    baby.setStats(y-1, baby.getStats(y - 1) - 5);
                     countP += 1;
                 }
             }
             if(countP>2 && baby.isDnaTrue(0) == true){
+                buffs += "Pride of the Weak\n";
                 baby.setStats(1,baby.getStats(1)*2);
-            }
-            if (countP > 2 && baby.isDnaTrue(0) == true)
-            {
-                baby.setStats(1, baby.getStats(1) * 2);
             }
             if(baby.isDnaTrue(6) == true)
             {
+                buffs += "Sweet Money\n";
                 if (baby.isDnaTrue(7) == true)
                 {
+                    buffs += "Sweeter Money\n";
                     if (baby.isDnaTrue(8) == true)
                     {
+                        buffs += "Too Sweet\n";
                         baby.price += 75;
                         baby.reGrow = 2;
                     }
@@ -258,19 +269,23 @@ public class PlantObject : MonoBehaviour {
         {
             if(baby.isDnaTrue(0) == true)
             {
+                buffs += "Erocktile Dysfunction\n";
                 baby.stats[3] -= 10;
                 baby.stats[4] -= 10;
                 if (baby.isDnaTrue(2) == true)
                 {
+                    buffs += "Rock Hard Baby\n";
                     baby.price += baby.stats[3] + baby.stats[4]; 
                 }
                 if(baby.isDnaTrue(3) == true)
                 {
+                    buffs += "Self Moisturizing\n";
                     baby.isWatered = true;
                 }
             }
             if(baby.isDnaTrue(3) == baby.isDnaTrue(4) && baby.isDnaTrue(3) == true)
             {
+                buffs += "Infertile\n";
                 baby.seeds = 0;
             }
 

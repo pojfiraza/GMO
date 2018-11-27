@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Detector
   - Soil
+  - Trunks
   layers:
   - Default
   - TransparentFX
